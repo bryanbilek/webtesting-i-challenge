@@ -7,7 +7,7 @@ module.exports = {
 
 function succeed(item) {
   if (item.enhancement < 20) {
-   item.enhancement + 1;
+   item.enhancement += 1;
   } else {
     return {...item};
   }
@@ -15,11 +15,11 @@ function succeed(item) {
 
 function fail(item) {
   if (item.enhancement < 15) {
-    item.durability - 5;
-  } else if (item.durability >= 15) {
-    item.durability - 10;
-  } else if(item.enhancement > 16) {
-    item.enhancement - 1;
+    item.durability -= 5;
+  } else if (item.enhancement > 16) {
+    item.enhancement -= 1;
+  } else if(item.enhancement >= 15) {
+    item.durability -= 10;
   } else {
     return {...item}
   }
