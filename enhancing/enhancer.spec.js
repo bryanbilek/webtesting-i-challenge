@@ -15,7 +15,7 @@ const itemThree = {
 }
 const itemFour = { 
     durability: 50,
-    enhancement: 18
+    enhancement: 15
 }
 
 const itemFive = {
@@ -47,13 +47,13 @@ describe("fail", () => {
     });
 
     it("i.enh >= 15 then i.dur decreases by 10", () => {
-        fail(itemOne);
+        fail(itemFour);
         expect((itemFour.durability)).toBe(40);
     });
 
     it("i.enh > 16 then i.enh decreases by 1", () => {
         fail(itemFive);
-        expect((itemFour.enhancement)).toBe(16);
+        expect((itemFive.enhancement)).toBe(16);
     });
 });
 
